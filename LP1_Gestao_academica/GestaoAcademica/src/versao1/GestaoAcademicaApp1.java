@@ -56,5 +56,6 @@ public class GestaoAcademicaApp1 {
     }
     
     public static void getDisciplinas2(){
+        //teste test tes
     }
 }
