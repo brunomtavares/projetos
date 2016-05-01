@@ -17,7 +17,7 @@ public class GestaoAcademicaApp1 {
 
     public static void main(String[] args) {
         mackenzie = new Universidade("Mackenzie");
-        mackenzie.carregarDadosArquivo("disciplinas-abddcdccebbdcebdbadd", "estudantes-abddcdccebbdcebdbadd", "matriculas-abddcdccebbdcebdbadd");
+        mackenzie.carregarDadosArquivo("disciplinas-abddcdccebbdcebdbadd.txt", "estudantes-abddcdccebbdcebdbadd.txt", "matriculas-abddcdccebbdcebdbadd.txt");
         //Usuario irá informar sua escolha para o menu
         selection(choose());
     }
@@ -28,8 +28,10 @@ public class GestaoAcademicaApp1 {
             case 1:
                 break;
             case 2:
+                getDisciplinas();
                 break;
             case 3:
+                getInformacoesDisciplina();
                 break;
             case 4:
                 break;
@@ -55,6 +57,41 @@ public class GestaoAcademicaApp1 {
         return resp;
     }
     
-    public static void TestandoMerge(){
+    public static void getDisciplinas(){
+        String listaDisciplina = "";
+        for(Disciplina objDisciplina : mackenzie.getDisciplinas())
+        {
+            listaDisciplina += objDisciplina.getCodigo() +  "\n";
+        }
+        System.out.println(listaDisciplina);
+    }
+    
+    public static void getInformacoesDisciplina(){
+        String codigoDisciplina = "";
+        String listaDisciplina = "";
+        String listaAlunos = "";
+        int numAlunos = 0;
+        
+        for(Disciplina objDisciplina : mackenzie.getDisciplinas())
+        {
+            listaDisciplina += objDisciplina.getCodigo() +  "\n";
+        }
+        
+        
+        codigoDisciplina = JOptionPane.showInputDialog("Digite o Código da Disciplina " + listaDisciplina);
+        for(int i = 0; i < mackenzie.getEstudantes().size(); i++)
+        {
+            for(int j = 0; j < mackenzie.getEstudantes().get(i).getMatriculas().size(); j++)
+            {
+                if(mackenzie.getEstudantes().get(i).getMatriculas().get(j).getDisciplina().getCodigo().equals(codigoDisciplina))
+                {
+                    listaAlunos += mackenzie.getEstudantes().get(i).getId() + " | " + mackenzie.getEstudantes().get(i).getNome() + " | " + mackenzie.getEstudantes().get(i).getEmail() + "\n";
+                    numAlunos++;
+                }
+            }
+        }
+        
+        System.out.println(listaAlunos + "\n Quantidade de alunos encontrados : " + numAlunos);
+        
     }
 }
