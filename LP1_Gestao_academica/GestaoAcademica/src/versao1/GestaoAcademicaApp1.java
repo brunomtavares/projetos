@@ -54,7 +54,7 @@ public class GestaoAcademicaApp1 {
 
         return resp;
     }
+    
     public static void getDisciplinas2(){
-        
     }
 }
