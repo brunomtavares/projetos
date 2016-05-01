@@ -83,7 +83,7 @@ public class GestaoAcademicaApp1 {
         {
             for(int j = 0; j < mackenzie.getEstudantes().get(i).getMatriculas().size(); j++)
             {
-                if(mackenzie.getEstudantes().get(i).getMatriculas().get(j).getDisciplina().getCodigo().equals(codigoDisciplina))
+                if(mackenzie.getEstudantes().get(i).getDisciplinasMatriculadas().get(j).getCodigo().equals(codigoDisciplina))
                 {
                     listaAlunos += mackenzie.getEstudantes().get(i).getId() + " | " + mackenzie.getEstudantes().get(i).getNome() + " | " + mackenzie.getEstudantes().get(i).getEmail() + "\n";
                     numAlunos++;
