@@ -14,6 +14,8 @@ import javax.swing.JOptionPane;
 public class GestaoAcademicaApp1 {
 
     public static void main(String[] args) {
+        Universidade mackenzie = new Universidade("Mackenzie");
+        mackenzie.carregarDadosArquivo("disciplinas-abddcdccebbdcebdbadd", "estudantes-abddcdccebbdcebdbadd", "matriculas-abddcdccebbdcebdbadd");
         //Usuario irá informar sua escolha para o menu
         selection(choose());
     }
@@ -49,5 +51,8 @@ public class GestaoAcademicaApp1 {
         }
 
         return resp;
+    }
+    public static void getAlunos(){
+        
     }
 }
