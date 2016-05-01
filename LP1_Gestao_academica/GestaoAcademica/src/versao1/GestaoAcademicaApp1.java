@@ -63,7 +63,7 @@ public class GestaoAcademicaApp1 {
         {
             listaDisciplina += objDisciplina.getCodigo() +  "\n";
         }
-        System.out.println(listaDisciplina);
+        JOptionPane.showMessageDialog(null,listaDisciplina);
     }
     
     public static void getInformacoesDisciplina(){
@@ -91,7 +91,7 @@ public class GestaoAcademicaApp1 {
             }
         }
         
-        System.out.println(listaAlunos + "\n Quantidade de alunos encontrados : " + numAlunos);
+        JOptionPane.showMessageDialog(null,listaAlunos + "\n Quantidade de alunos encontrados : " + numAlunos);
         
     }
 }
