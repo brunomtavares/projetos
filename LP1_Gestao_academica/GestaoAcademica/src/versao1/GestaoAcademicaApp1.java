@@ -52,7 +52,7 @@ public class GestaoAcademicaApp1 {
 
         return resp;
     }
-    public static void getAlunos(){
+    public static void getDisciplinas(){
         
     }
 }
