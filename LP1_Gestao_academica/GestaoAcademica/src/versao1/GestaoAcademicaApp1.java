@@ -90,8 +90,16 @@ public class GestaoAcademicaApp1 {
                 }
             }
         }
-        
+        infDisciplina(listaAlunos, numAlunos);
+    }
+    
+    public static void infDisciplina(String listaAlunos, int numAlunos)
+    {
         JOptionPane.showMessageDialog(null,listaAlunos + "\n Quantidade de alunos encontrados : " + numAlunos);
-        
+    }
+    
+    public void infAlunosDisciplinas(String listaAlunos, String numAlunos)
+    {
+        JOptionPane.showMessageDialog(null,listaAlunos + "\n Quantidade de alunos encontrados : " + numAlunos);
     }
 }
