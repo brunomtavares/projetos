@@ -54,7 +54,7 @@ public class GestaoAcademicaApp1 {
 
         return resp;
     }
-    public static void showAlunos(){
-        ///2for(int i = 0 ; i <  )
+    
+    public static void getDisciplinas2(){
     }
 }
